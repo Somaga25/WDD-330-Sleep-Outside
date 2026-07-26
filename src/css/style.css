@@ -125,6 +125,8 @@ button {
 
 .cart svg {
   width: 25px;
+  transform-origin: center center;
+  display: block;
 }
 
 .cart:hover svg {
@@ -260,4 +262,40 @@ button {
 footer {
   font-size: var(--small-font);
   padding: 1em;
+}
+
+.hide {
+  display: none;
+}
+
+.cart-footer {
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  border-top: 2px solid var(--primary-color);
+  text-align: right;
+}
+
+.cart-total {
+  font-size: var(--large-font);
+  font-weight: bold;
+}
+@keyframes cartBounce {
+  0% {
+    transform: translateX(0) scale(1);
+    fill: currentColor;
+  }
+
+  40% {
+    transform: translateX(8px) scale(1.25);
+    fill: var(--primary-color);
+  }
+
+  100% {
+    transform: translateX(0) scale(1);
+    fill: currentColor;
+  }
+}
+
+.cart-bounce {
+  animation: cartBounce 0.45s ease-out;
 }
